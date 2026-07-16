@@ -1,0 +1,108 @@
+{
+  "rules": {
+    "project": [
+      ".claude/rules/script-writing.md",
+      ".claude/rules/character-design.md",
+      ".claude/rules/clue-design.md",
+      ".claude/rules/consistency.md",
+      ".claude/rules/quality.md",
+      ".claude/rules/workflow.md"
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "Grep",
+      "Glob",
+      "Agent",
+      "Workflow",
+      "WebFetch",
+      "WebSearch",
+      "TodoWrite",
+      "ToolSearch"
+    ]
+  },
+  "hooks": {
+    "preTool": ".claude/hooks/pre-tool.md",
+    "postTool": ".claude/hooks/post-tool.md"
+  },
+  "models": {
+    "default": "claude-sonnet-5",
+    "agents": {
+      "story-architect": "claude-opus-4-8",
+      "reviewer": "claude-opus-4-8",
+      "character-designer": "claude-sonnet-5",
+      "plot-weaver": "claude-opus-4-8",
+      "clue-designer": "claude-sonnet-5",
+      "script-writer": "claude-sonnet-5",
+      "dialogue-writer": "claude-sonnet-5",
+      "props-designer": "claude-haiku-4-5-20251001",
+      "dm-guide-writer": "claude-sonnet-5",
+      "worldbuilder": "claude-sonnet-5"
+    }
+  },
+  "skills": [
+    {
+      "name": "create-script",
+      "description": "交互式引导创建完整剧本杀剧本，从创意到成品一站式完成",
+      "filePath": ".claude/skills/create-script.md"
+    },
+    {
+      "name": "design-plot",
+      "description": "设计剧本杀的剧情架构，包括核心诡计、时间线、事件链和反转",
+      "filePath": ".claude/skills/design-plot.md"
+    },
+    {
+      "name": "create-characters",
+      "description": "创建剧本杀的角色体系，包括角色档案、动机、关系网和秘密",
+      "filePath": ".claude/skills/create-characters.md"
+    },
+    {
+      "name": "design-clues",
+      "description": "设计剧本杀的线索系统，包括证据链、推理路径和关卡设计",
+      "filePath": ".claude/skills/design-clues.md"
+    },
+    {
+      "name": "write-script",
+      "description": "撰写剧本杀的完整剧本正文，包括分幕、对白、行动指令",
+      "filePath": ".claude/skills/write-script.md"
+    },
+    {
+      "name": "review-script",
+      "description": "对剧本进行多维度审核，检查逻辑漏洞、一致性和质量",
+      "filePath": ".claude/skills/review-script.md"
+    },
+    {
+      "name": "generate-dm-guide",
+      "description": "为剧本杀生成完整的主持人手册（DM指南）",
+      "filePath": ".claude/skills/generate-dm-guide.md"
+    },
+    {
+      "name": "design-world",
+      "description": "构建剧本杀的世界观设定，包括时代背景、地点、核心设定",
+      "filePath": ".claude/skills/design-world.md"
+    },
+    {
+      "name": "export-script",
+      "description": "将完成的剧本导出为多种格式（PDF、DOCX、TXT、JSON等）",
+      "filePath": ".claude/skills/export-script.md"
+    },
+    {
+      "name": "brainstorm",
+      "description": "进行创意头脑风暴，生成剧本杀的核心创意点子",
+      "filePath": ".claude/skills/brainstorm.md"
+    },
+    {
+      "name": "init-script",
+      "description": "初始化一个新剧本项目，创建目录结构和基础文件",
+      "filePath": ".claude/skills/init-script.md"
+    }
+  ],
+  "ignoredFiles": [
+    "output/**",
+    "**/.git/**"
+  ]
+}
